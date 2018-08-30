@@ -79,8 +79,6 @@ run()
 
 Vamos agora imprimir o RSS (soma dos erros quadrados) a cada iteração do gradiente descendente. 
 Para isso, definirei a função *compute_rss* que será chamara a cada iteração da função *gradient_descent_runner*.
-A função *compute_rss* foi implementada de acordo com a seguinte fórmula: ![alt text](formulaRSS.PNG "fórmula do RSS")
-
 
 Como é possível perceber, o valor do RSS cai a cada iteração, sendo essa queda maior nas primeiras iterações. Para facilitar a visualização, um gráfico com os valores do RSS foi plotado. O eixo x, que representa o número de iterações, é exibido em escala logarítmica, para que fique mais fácil de visualizar o valor do RSS decrescendo.
  
@@ -184,7 +182,7 @@ run()
 
 ## Gradiente como critério de parada
 
-Agora, vamos utilizar o gradiente como critério de parada. Para isso, mudarei a condição do *while* da função *gradient_descent_runner*. O gradiente é definido pela seguinte fórmula: ![alt text](formulaGradiente.PNG "fórmula do gradiente")
+Agora, vamos utilizar o gradiente como critério de parada. Para isso, mudarei a condição do *while* da função *gradient_descent_runner*. 
 
 Para usar o gradiente no *while*, utilizei a raiz quadrada da soma dos quadrados das variáveis **b_gradient** e **m_gradient**. Esse valor deve ser menor que a tolerância definida para que o algoritmo convirja.
 
